@@ -1,0 +1,7 @@
+﻿<Page x:Class="Project1WilliamClark.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="#E5F2E5">
+        <!-- Your UI elements here -->
+    </Grid>
+</Page>
