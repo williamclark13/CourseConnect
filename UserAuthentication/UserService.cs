@@ -26,9 +26,13 @@ namespace Project1WilliamClark.UserAuthentication
             try
             {
                 if (!IsValidEmail(email))
+                {
                     throw new FormatException("Invalid email format.");
+                }
                 if (!IsValidPhoneNumber(phoneNumber))
+                {
                     throw new FormatException("Invalid phone number format.");
+                }
                 if (IsUserExists(email))
                 {
                     Console.WriteLine("User already exists.");
@@ -58,7 +62,9 @@ namespace Project1WilliamClark.UserAuthentication
             {
                 var user = users.FirstOrDefault(u => u.Email == email);
                 if (user == null || user.Password != password)
+                {
                     throw new InvalidOperationException("Invalid email or password.");
+                }
 
                 Console.WriteLine("Login successful.");
                 return true;
@@ -84,11 +90,17 @@ namespace Project1WilliamClark.UserAuthentication
             {
                 var user = users.FirstOrDefault(u => u.Email == email && u.Password == password);
                 if (user == null)
+                {
                     throw new InvalidOperationException("Invalid email or password.");
+                }
                 if (!IsValidEmail(newEmail))
+                {
                     throw new FormatException("Invalid new email format.");
+                }
                 if (!IsValidPhoneNumber(newPhoneNumber))
+                {
                     throw new FormatException("Invalid new phone number format.");
+                }
 
                 user.Email = newEmail;
                 user.PhoneNumber = newPhoneNumber;
