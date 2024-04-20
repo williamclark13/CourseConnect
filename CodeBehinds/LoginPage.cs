@@ -1,11 +1,12 @@
 ﻿using Project1WilliamClark.UserAuthentication;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
+using System.Diagnostics;
 
 namespace Project1WilliamClark.CodeBehinds
 {
     /// <summary>
-    /// Represents the logic for the login page of the application.
+    /// Represents the logic for the login page where users can sign in.
     /// </summary>
     public partial class LoginPage : Page
     {
@@ -18,13 +19,13 @@ namespace Project1WilliamClark.CodeBehinds
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            if (userService.Login(txtEmail.Text, txtPassword.Password))
+            if (userService.Login(txtEmail.Text, txtPassword.Text))
             {
-                // Navigate to the next page (e.g., user profile page)
+                Frame.Navigate(typeof(UserProfilePage));
             }
             else
             {
-                // Display error message
+                Debug.WriteLine("Error: Login failed. Please check your email and password and try again.");
             }
         }
     }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Project1WilliamClark.CodeBehinds;
+using Project1WilliamClark.Testing;
+using Project1WilliamClark.UserAuthentication;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +33,14 @@ namespace Project1WilliamClark
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            //UserServiceTests userServiceTests = new UserServiceTests();
+            //userServiceTests.RunAllTests();
+
+            //UserService userService = new UserService();
+            //userService.SaveSignupToJson("example@example.com", "1234567890", "password", "signup.json");
+            //userService.SaveLoginToJson("example@example.com", "password", "login.json");
+            //userService.SaveUpdateUserProfileToJson("example@example.com", "password", "new@example.com", "0987654321", "update.json");
         }
 
         /// <summary>
@@ -66,7 +77,7 @@ namespace Project1WilliamClark
                     // When the navigation stack isn't restored navigate to the first page,
                     // configuring the new page by passing required information as a navigation
                     // parameter
-                    rootFrame.Navigate(typeof(MainPage), e.Arguments);
+                    rootFrame.Navigate(typeof(SignupPage), e.Arguments);
                 }
                 // Ensure the current window is active
                 Window.Current.Activate();

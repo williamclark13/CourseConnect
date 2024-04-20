@@ -119,6 +119,7 @@
     <Compile Include="CodeBehinds\LoginPage.cs" />
     <Compile Include="CodeBehinds\SignupPage.cs" />
     <Compile Include="CodeBehinds\UserProfilePage.cs" />
+    <Compile Include="Testing\Program.cs" />
     <Compile Include="Testing\TestingUserAuthentication.cs" />
     <Compile Include="UserInterfaces\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -127,7 +128,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Testing\Program.cs" />
     <Compile Include="UserAuthentication\User.cs" />
     <Compile Include="UserAuthentication\UserService.cs" />
   </ItemGroup>

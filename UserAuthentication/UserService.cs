@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using System;
 using System.Linq;
-using System.Xml;
 using System.IO;
-using Newtonsoft.Json;
 using Formatting = Newtonsoft.Json.Formatting;
+using Newtonsoft.Json;
 
 namespace Project1WilliamClark.UserAuthentication
 {

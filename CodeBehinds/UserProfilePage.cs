@@ -1,6 +1,7 @@
 ﻿using Project1WilliamClark.UserAuthentication;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
+using System.Diagnostics;
 
 namespace Project1WilliamClark.CodeBehinds
 {
@@ -20,11 +21,11 @@ namespace Project1WilliamClark.CodeBehinds
         {
             if (userService.UpdateUserProfile(txtEmail.Text, txtPassword.Text, txtNewEmail.Text, txtNewPhoneNumber.Text))
             {
-                // Display success message
+                Debug.WriteLine("User profile updated successfully.");
             }
             else
             {
-                // Display error message
+                Debug.WriteLine("Error: Unable to update user profile. Please check your inputs and try again.");
             }
         }
     }
